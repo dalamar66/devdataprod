@@ -1,0 +1,49 @@
+---
+title: Mapping Baltimore Police Department Victim Based Crime Data
+author: Sefa Kilic
+output: slidy_presentation
+framework: io2012
+highlighter: highlight.js
+mode: selfcontained
+
+---
+
+
+## Stock Market Performance
+
+![](stock.png)
+
+---
+
+## Data
+
+- Downloaded from Yahoo using Quantmod package.
+```{r}
+load.packages('quantmod')
+         
+tickers = spl('UUP,EMB,HYG')
+data <- new.env() 
+# load historical data, getSymbols from quantmod
+getSymbols(tickers, src = 'yahoo', from = '1970-01-01', env = data, auto.assign = T)    
+ 
+```
+---
+
+
+## Stockmarket Performance Overview
+It takes a few seconds to load the data, after that the stock market performance for one week is displayed.
+
+* The slider allows to display the performance for up to 24 weeks.
+* Used quantitative packages like quantmod and PerformanceAnalytics
+* Used fonts package extrafont
+* Chart drawed with ggplot2
+
+---
+
+## Shiny App
+
+- Available at https://dalamar.shinyapps.io/Performance-Stocks-Shiny
+- Code available at: 
+- View stock market performance for recent weeks based on Quandl package
+- Downloaded data from Yahoo
+- Filter by number of weeks 

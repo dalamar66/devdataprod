@@ -1,0 +1,8 @@
+name: devdataprod
+account: dalamar
+server: shinyapps.io
+bundleId: 339259
+url: https://dalamar.shinyapps.io/devdataprod
+when: 1451200571.41159
+asMultiple: FALSE
+asStatic: FALSE

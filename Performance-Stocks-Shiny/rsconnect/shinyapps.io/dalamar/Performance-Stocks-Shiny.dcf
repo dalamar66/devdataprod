@@ -1,0 +1,8 @@
+name: Performance-Stocks-Shiny
+account: dalamar
+server: shinyapps.io
+bundleId: 339300
+url: https://dalamar.shinyapps.io/Performance-Stocks-Shiny
+when: 1451205362.14003
+asMultiple: FALSE
+asStatic: FALSE
