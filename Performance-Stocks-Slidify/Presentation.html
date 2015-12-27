@@ -58,7 +58,7 @@ data &lt;-<span class="st"> </span><span class="kw">new.env</span>()
 <pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Pre-Download Stock Data, this will take a few seconds.</span>
 countryNames&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;ETFCountries.txt&quot;</span>)
 tickerNames&lt;-<span class="kw">as.vector</span>(countryNames[,<span class="dv">2</span>])
-<span class="kw">getSymbols</span>(tickerNames, <span class="dt">from=</span><span class="st">&quot;2012-01-01&quot;</span>)</code></pre>
+<span class="kw">getSymbols</span>(tickerNames, <span class="dt">from=</span><span class="st">&quot;2014-01-01&quot;</span>)</code></pre>
 </div>
 <div id="stockmarket-performance-overview" class="slide section level2">
 <h1>Stockmarket Performance Overview</h1>
@@ -73,11 +73,12 @@ tickerNames&lt;-<span class="kw">as.vector</span>(countryNames[,<span class="dv"
 <div id="shiny-app" class="slide section level2">
 <h1>Shiny App</h1>
 <ul>
-<li>Available at <a href="https://dalamar.shinyapps.io/Performance-Stocks-Shiny" class="uri">https://dalamar.shinyapps.io/Performance-Stocks-Shiny</a></li>
-<li>Code available at:</li>
+<li>Shiny App Available at <a href="https://dalamar.shinyapps.io/Performance-Stocks-Shiny" class="uri">https://dalamar.shinyapps.io/Performance-Stocks-Shiny</a></li>
+<li>Slidify presentation available at: <a href="https://dalamar.shinyapps.io/Presentation" class="uri">https://dalamar.shinyapps.io/Presentation</a></li>
+<li>Code available at: <a href="https://github.com/dalamar66/devdataprod" class="uri">https://github.com/dalamar66/devdataprod</a></li>
 <li>View stock market performance for recent weeks based on Quandl package</li>
 <li>Data downloaded data from Yahoo depending on the file ETFCountries.txt</li>
-<li>Filter by number of weeks</li>
+<li>Filter by number of weeks using the slider provided</li>
 </ul>
 </div>
 

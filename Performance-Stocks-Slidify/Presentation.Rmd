@@ -53,7 +53,7 @@ It takes a few seconds to load the data, after that the stock market performance
 
 - Shiny App Available at https://dalamar.shinyapps.io/Performance-Stocks-Shiny
 - Slidify presentation available at: https://dalamar.shinyapps.io/Presentation
-- Code available at: 
+- Code available at: https://github.com/dalamar66/devdataprod
 - View stock market performance for recent weeks based on Quandl package
 - Data downloaded data from Yahoo depending on the file ETFCountries.txt
 - Filter by number of weeks using the slider provided
