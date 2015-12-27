@@ -46,7 +46,7 @@ Daniel Sobrado
 <ul>
 <li>Downloaded from Yahoo using Quantmod package.</li>
 </ul>
-<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">load.packages</span>(<span class="st">'quantmod'</span>)
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(<span class="st">'quantmod'</span>)
          
 tickers =<span class="st"> </span><span class="kw">spl</span>(<span class="st">'UUP,EMB,HYG'</span>)
 data &lt;-<span class="st"> </span><span class="kw">new.env</span>() 
@@ -59,6 +59,15 @@ data &lt;-<span class="st"> </span><span class="kw">new.env</span>()
 countryNames&lt;-<span class="kw">read.csv</span>(<span class="st">&quot;ETFCountries.txt&quot;</span>)
 tickerNames&lt;-<span class="kw">as.vector</span>(countryNames[,<span class="dv">2</span>])
 <span class="kw">getSymbols</span>(tickerNames, <span class="dt">from=</span><span class="st">&quot;2014-01-01&quot;</span>)</code></pre>
+<ul>
+<li>Calculations using PerformanceAnalytics.</li>
+</ul>
+<pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(<span class="st">'PerformanceAnalytics'</span>)
+
+countriesprices &lt;-<span class="st"> </span><span class="kw">do.call</span>(cbind, countriesprices)
+ep&lt;-<span class="kw">endpoints</span>(countriesprices, <span class="dt">on =</span> <span class="st">&quot;weeks&quot;</span>)
+countriesprices&lt;-countriesprices[ep,]
+countriesprices&lt;-<span class="kw">Return.calculate</span>(countriesprices)         </code></pre>
 </div>
 <div id="stockmarket-performance-overview" class="slide section level2">
 <h1>Stockmarket Performance Overview</h1>

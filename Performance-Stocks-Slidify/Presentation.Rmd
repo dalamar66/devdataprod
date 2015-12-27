@@ -8,7 +8,6 @@ mode: selfcontained
 
 ---
 
-
 ## Stock Market Performance
 
 ![](stock.png)
@@ -20,7 +19,7 @@ mode: selfcontained
 
 - Downloaded from Yahoo using Quantmod package.
 ```{r eval=FALSE}
-load.packages('quantmod')
+require('quantmod')
          
 tickers = spl('UUP,EMB,HYG')
 data <- new.env() 
@@ -35,6 +34,16 @@ getSymbols(tickers, src = 'yahoo', from = '1970-01-01', env = data, auto.assign 
 countryNames<-read.csv("ETFCountries.txt")
 tickerNames<-as.vector(countryNames[,2])
 getSymbols(tickerNames, from="2014-01-01")
+```
+
+- Calculations using PerformanceAnalytics.
+```{r eval=FALSE}
+require('PerformanceAnalytics')
+
+countriesprices <- do.call(cbind, countriesprices)
+ep<-endpoints(countriesprices, on = "weeks")
+countriesprices<-countriesprices[ep,]
+countriesprices<-Return.calculate(countriesprices)         
 ```
 
 ---
